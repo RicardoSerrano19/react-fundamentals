@@ -20,14 +20,16 @@
 
 <html>
     <body>
-        <div id="root"></div>
 
         <script>
             let divElement = document.createElement('div');
             divElement.classList.add('container');
             divElement.textContent = 'Hello World';
 
-            let rootElement = document.getElementById('root');
+            let rootElement = document.createElement('div');
+            rootElement.setAttribute('id', 'root')
+            document.body.appendChild(rootElement)
+
             rootElement.appendChild(divElement)
         </script>   
     </body>

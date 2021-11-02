@@ -16,9 +16,13 @@
     // You're going to re-implement this code using React!
     // 💣 So go ahead and delete this implementation (or comment it out for now)
     // These three lines are similar to React.createElement
-    const elementProps = { className: 'container', children: 'Hello World Props'}
-    const elementType = 'div';
-    const reactElement = React.createElement(elementType, elementProps);
+    const spanOne = React.createElement('span', {children: 'Hello'});
+    const spanTwo = React.createElement('span', {children: 'World'});
+
+    const reactElement = React.createElement('div',{
+          className: 'container', 
+          children: [spanOne, ' ' ,spanTwo]
+          });
     // This is similar to ReactDOM.render
     ReactDOM.render(reactElement, rootElement)
 
